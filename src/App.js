@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const projects = [
   {
@@ -46,7 +47,7 @@ const projects = [
   },
 ];
 
-export default function App() {
+function App() {
   return (
     <div className="app-container">
       <header className="header">
@@ -130,6 +131,9 @@ export default function App() {
       <footer className="footer">
         <p>© 2025 Zachary Kralec. All rights reserved.</p>
       </footer>
+      <Analytics />
     </div>
   );
 } 
+
+export default App;
