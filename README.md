@@ -1,1 +1,1 @@
-This portfolio is to showcase all of my personal work and projects. I am using React to develop this webpage and will be using this to display on 'www.zkralec.dev'.
+This portfolio is to showcase all of my personal work and projects. I am using JavaScript to develop this webpage and will be using this to display on 'www.zkralec.dev'.
