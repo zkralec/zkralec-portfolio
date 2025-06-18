@@ -4,33 +4,45 @@ import "./App.css";
 const projects = [
   {
     title: "Personal Finance Tracker",
+    language: "Python",
     description: "Track expenses and income using Python and Tkinter.",
     image: "/images/FinanceTracker.jpg",
+    link: "https://github.com/zkralec/FinanceTracker"
   },
   {
     title: "Review Aggregator",
+    language: "Python",
     description: "Scrapes and analyzes product reviews using Python and sentiment analysis.",
     image: "/images/ReviewAggregator.jpg",
+    link: "https://github.com/zkralec/ReviewAggregator"
   },
   {
     title: "Quote Scraper",
+    language: "Python",
     description: "Beginner project to practice web scraping techniques.",
     image: "/images/QuoteScraper.jpg",
+    link: "https://github.com/zkralec/QuoteScraper"
   },
   {
     title: "News Aggregator",
+    language: "Python",
     description: "Scrapes top news stories and summarizes them for quick reading.",
     image: "/images/NewsAggregator.jpg",
+    link: "https://github.com/zkralec/NewsAggregator"
   },
   {
     title: "Sprint Start",
+    language: "Swift",
     description: "Mobile app to help sprinters improve reaction time.",
     image: "/images/SprintStart.jpg",
+    link: "https://github.com/zkralec/SprintStart"
   },
   {
     title: "Track Tracker",
+    language: "Swift",
     description: "Large-scale app for tracking workouts, meals, injuries, and progress.",
     image: "/images/TrackTracker.jpg",
+    link: "https://github.com/zkralec/TrackTracker"
   },
 ];
 
@@ -40,12 +52,9 @@ export default function App() {
       <header className="header">
         <h1>Zachary Kralec</h1>
         <p>Computer Science Student @ St. Mary's College of Maryland</p>
-        <p className="tagline">
-          Passionate about building meaningful software that solves real problems.
-        </p>
         <hr className="divider" />
         <p>
-          Explore my projects below and get in touch to collaborate or chat about technology.
+          Explore my projects below and get in touch to talk about my skills, interests, or what I could bring as an employee.
         </p>
         <a
           href="/Zachary-Kralec-Resume.pdf"
@@ -88,15 +97,26 @@ export default function App() {
       <section className="projects">
         <h2>Projects</h2>
         {projects.map((project, index) => (
-          <div className="project-card" key={index}>
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-card"
+            key={index}
+          >
             <div className="project-image">
-              {project.image ? <img src={project.image} alt={project.title} /> : <div className="placeholder">Image Coming Soon</div>}
+              {project.image ? (
+                <img src={project.image} alt={project.title} />
+              ) : (
+                <div className="placeholder">Image Coming Soon</div>
+              )}
             </div>
             <div className="project-info">
               <h3>{project.title}</h3>
+              <p className="project-language">{project.language}</p>
               <p>{project.description}</p>
             </div>
-          </div>
+          </a>
         ))}
       </section>
 
