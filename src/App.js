@@ -6,42 +6,42 @@ const projects = [
   {
     title: "Personal Finance Tracker",
     language: "Python",
-    description: "Track expenses and income using Python and Tkinter.",
+    description: "A Python desktop app for managing income and creating custom budgets. Users can input their salary, generate suggested budgets, and track purchases using dynamic tables. I built this to strengthen my skills in Tkinter and Matplotlib while learning how to structure a real-world Python project.",
     image: "/images/FinanceTracker.jpg",
     link: "https://github.com/zkralec/FinanceTracker"
   },
   {
     title: "Review Aggregator",
     language: "Python",
-    description: "Scrapes and analyzes product reviews using Python and sentiment analysis.",
+    description: "This tool scrapes customer reviews from Trustpilot for any website — including brands like Amazon, Nike, and Temu. It calculates the average star rating using custom scraping and parsing logic. It was a fun way to combine web scraping and simple sentiment analysis in a practical way.",
     image: "/images/ReviewAggregator.jpg",
     link: "https://github.com/zkralec/ReviewAggregator"
   },
   {
     title: "Quote Scraper",
     language: "Python",
-    description: "Beginner project to practice web scraping techniques.",
+    description: "A beginner-friendly scraper that pulls quotes from quotes.toscrape.com and saves them to a CSV file. I used this project to get comfortable with scraping fundamentals and working with file output in Python.",
     image: "/images/QuoteScraper.jpg",
     link: "https://github.com/zkralec/QuoteScraper"
   },
   {
     title: "News Aggregator",
     language: "Python",
-    description: "Scrapes top news stories and summarizes them for quick reading.",
+    description: "A multi-source scraper that collects and summarizes top headlines from NPR, TechCrunch, Hacker News, and BBC. Each article pulls a quick summary (or full text if needed) for fast reading. This project helped me explore how to extract meaningful content from real-world HTML structures.",
     image: "/images/NewsAggregator.jpg",
     link: "https://github.com/zkralec/NewsAggregator"
   },
   {
     title: "Sprint Start",
     language: "Swift",
-    description: "Mobile app to help sprinters improve reaction time.",
+    description: "A Swift mobile app that simulates a race start with adjustable audio cues. It’s built to train sprinters’ reaction times with customizable settings for sound type, timing variability, and more. I use it during my own training to improve starts and block reaction time.",
     image: "/images/SprintStart.jpg",
     link: "https://github.com/zkralec/SprintStart"
   },
   {
     title: "Track Tracker",
     language: "Swift",
-    description: "Large-scale app for tracking workouts, meals, injuries, and progress.",
+    description: "A full-featured Swift app for track athletes. Users can log in via Firebase and track workouts, weights, injuries, and PRs for any event. The app also suggests meals, includes a simplified sprint start trainer, and saves data persistently across sessions. I built this as a passion project and pushed myself to tie everything together in a single app.",
     image: "/images/TrackTracker.jpg",
     link: "https://github.com/zkralec/TrackTracker"
   },
@@ -51,21 +51,27 @@ function App() {
   return (
     <div className="app-container">
       <header className="header">
-        <h1>Zachary Kralec</h1>
-        <p>Computer Science Student @ St. Mary's College of Maryland</p>
-        <hr className="divider" />
-        <p>
-          Explore my projects below and get in touch to talk about my skills, interests, or what I could bring as an employee.
-        </p>
-        <a
-          href="/Zachary-Kralec-Resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          download
-          className="resume-button"
-        >
-          Download My Resume
-        </a>
+        <div className="header-content">
+          <div className="header-text">
+            <h1 className="animated-name">Zachary Kralec</h1>
+            <p className="subheading">Computer Science Student @ St. Mary's College of Maryland</p>
+            <p className="intro">
+              Explore my projects below and get in touch to talk about my skills, interests, or what I could bring as an employee.
+            </p>
+          </div>
+          <div className="header-action">
+            <a
+              href="/Zachary-Kralec-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              className="resume-button"
+            >
+              Download My Resume
+            </a>
+          </div>
+        </div>
+        <div className="header-accent" aria-hidden="true"></div>
       </header>
 
       <section className="about">
@@ -113,8 +119,8 @@ function App() {
               )}
             </div>
             <div className="project-info">
+              <span className="tech-badge">{project.language}</span>
               <h3>{project.title}</h3>
-              <p className="project-language">{project.language}</p>
               <p>{project.description}</p>
             </div>
           </a>
