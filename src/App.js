@@ -54,6 +54,25 @@ const projects = [
   },
 ];
 
+const badges = [
+  {
+    title: "Intro to Generative AI",
+    image: "/images/genai-intro-badge.png"
+  },
+  {
+    title: "Gemini for DevOps Engineers",
+    image: "/images/devops-badge.png"
+  },
+  {
+    title: "Encoder-Decoder Architecture",
+    image: "/images/encoder-decoder-badge.png"
+  },
+  {
+    title: "MLOps for Generative AI",
+    image: "/images/mlops-badge.png"
+  },
+];
+
 function App() {
   return (
     <div className="app-container">
@@ -132,6 +151,24 @@ function App() {
             </div>
           </a>
         ))}
+      </section>
+
+      <section className="badges">
+        <h2>Badges/Certifications</h2>
+        <div className="badge-grid">
+          {badges.map((badge, index) => (
+            <a
+              href={badge.link}
+              key={index}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="badge-card"
+            >
+              <img src={badge.image} alt={badge.title} className="badge-image" />
+              <p className="badge-title">{badge.title}</p>
+            </a>
+          ))}
+        </div>
       </section>
 
       <section className="contact">
