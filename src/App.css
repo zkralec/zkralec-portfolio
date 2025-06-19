@@ -6,6 +6,7 @@ body {
   line-height: 1.6;
   background-attachment: fixed;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 a {
@@ -90,6 +91,8 @@ a:hover {
 }
 
 .resume-button {
+  max-width: 100%;
+  box-sizing: border-box;
   background-color: #5ec9f5;
   padding: 14px 32px;
   font-weight: 700;

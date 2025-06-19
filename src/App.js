@@ -4,18 +4,11 @@ import { Analytics } from "@vercel/analytics/react";
 
 const projects = [
   {
-    title: "Personal Finance Tracker",
+    title: "AI Fake News Detector",
     language: "Python",
-    description: "A Python desktop app for managing income and creating custom budgets. Users can input their salary, generate suggested budgets, and track purchases using dynamic tables. I built this to strengthen my skills in Tkinter and Matplotlib while learning how to structure a real-world Python project.",
-    image: "/images/FinanceTracker.jpg",
-    link: "https://github.com/zkralec/FinanceTracker"
-  },
-  {
-    title: "Review Aggregator",
-    language: "Python",
-    description: "This tool scrapes customer reviews from Trustpilot for any website — including brands like Amazon, Nike, and Temu. It calculates the average star rating using custom scraping and parsing logic. It was a fun way to combine web scraping and simple sentiment analysis in a practical way.",
-    image: "/images/ReviewAggregator.jpg",
-    link: "https://github.com/zkralec/ReviewAggregator"
+    description: "A machine learning model that classifies political statements as either fake or real using the LIAR dataset. I built a full pipeline in Python using pandas and scikit-learn — preprocessing the data, vectorizing the text with TF-IDF, and training a logistic regression model that reached about 62% accuracy. I also started experimenting with TensorFlow to explore deep learning versions of the project.",
+    image: "/images/AIFakeNewsDetector.jpg",
+    link: "https://github.com/zkralec/AIFakeNewsDetector"
   },
   {
     title: "Quote Scraper",
@@ -25,11 +18,25 @@ const projects = [
     link: "https://github.com/zkralec/QuoteScraper"
   },
   {
+    title: "Review Aggregator",
+    language: "Python",
+    description: "This tool scrapes customer reviews from Trustpilot for any website — including brands like Amazon, Nike, and Temu. It calculates the average star rating using custom scraping and parsing logic. It was a fun way to combine web scraping and simple sentiment analysis in a practical way.",
+    image: "/images/ReviewAggregator.jpg",
+    link: "https://github.com/zkralec/ReviewAggregator"
+  },
+  {
     title: "News Aggregator",
     language: "Python",
     description: "A multi-source scraper that collects and summarizes top headlines from NPR, TechCrunch, Hacker News, and BBC. Each article pulls a quick summary (or full text if needed) for fast reading. This project helped me explore how to extract meaningful content from real-world HTML structures.",
     image: "/images/NewsAggregator.jpg",
     link: "https://github.com/zkralec/NewsAggregator"
+  },
+  {
+    title: "Personal Finance Tracker",
+    language: "Python",
+    description: "A Python desktop app for managing income and creating custom budgets. Users can input their salary, generate suggested budgets, and track purchases using dynamic tables. I built this to strengthen my skills in Tkinter and Matplotlib while learning how to structure a real-world Python project.",
+    image: "/images/FinanceTracker.jpg",
+    link: "https://github.com/zkralec/FinanceTracker"
   },
   {
     title: "Sprint Start",
