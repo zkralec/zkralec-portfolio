@@ -175,7 +175,7 @@ function App() {
         <h2>Contact</h2>
         <p>Email: <a href="mailto:zkralec@icloud.com">zkralec@icloud.com</a></p>
         <p>GitHub: <a href="https://github.com/zkralec" target="_blank" rel="noreferrer">github.com/zkralec</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/zack-kralec-8b5a7a263/" target="_blank" rel="noreferrer">linkedin.com/in/zack-kralec</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/zack-kralec-8b5a7a263/" target="_blank" rel="noreferrer">linkedin.com/zack-kralec</a></p>
       </section>
 
       <footer className="footer">
