@@ -4,6 +4,13 @@ import { Analytics } from "@vercel/analytics/react";
 
 const projects = [
   {
+    title: "AI Interview Platform",
+    language: "JavaScript, CSS",
+    description: "An AI‑powered behavioral interviewer built with React, Tailwind, and Node. The app guides users through a simulated job interview by asking questions, recording responses (both text and voice), and providing constructive feedback. It uses the OpenAI API (gpt‑4o‑mini) to generate context‑aware questions and actionable feedback, making it an ideal practice tool for polishing interview skills.",
+    image: "/images/AIInterviewPlatform.jpg",
+    link: "https://github.com/zkralec/AIInterviewPlatform"
+  },
+  {
     title: "AI Fake News Detector",
     language: "Python",
     description: "A machine learning model that classifies political statements as either fake or real using the LIAR dataset. I built a full pipeline in Python using pandas and scikit-learn — preprocessing the data, vectorizing the text with TF-IDF, and training a logistic regression model that reached about 62% accuracy. I also started experimenting with TensorFlow to explore deep learning versions of the project.",
