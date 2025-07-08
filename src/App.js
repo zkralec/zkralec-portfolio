@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 const projects = [
   {
     title: "AI Interview Platform",
-    language: "JavaScript, CSS",
+    language: "JavaScript, HTML, CSS",
     description: "An AI‑powered behavioral interviewer built with React, Tailwind, and Node. The app guides users through a simulated job interview by asking questions, recording responses (both text and voice), and providing constructive feedback. It uses the OpenAI API (gpt‑4o‑mini) to generate context‑aware questions and actionable feedback, making it an ideal practice tool for polishing interview skills.",
     image: "/images/AIInterviewPlatform.jpg",
     link: "https://github.com/zkralec/AIInterviewPlatform"
