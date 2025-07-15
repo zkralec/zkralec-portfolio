@@ -4,6 +4,13 @@ import { Analytics } from "@vercel/analytics/react";
 
 const projects = [
   {
+    title: "Stride Lab",
+    language: "JaveScript, HTML, CSS",
+    description: "StrideLab is a web app I built that creates personalized training plans for track and field athletes. It uses Firebase for user accounts and OpenAI's GPT to generate detailed, structured workouts based on the athlete's info. Athletes can pick their events, training goals, which days they’re available, and whether they want weight training included. The GPT returns a clean JSON object with warmups, workouts, and cooldowns — all based on real track and field logic (not random sets or reps).",
+    image: "/images/StrideLab.jpg",
+    link: "https://github.com/zkralec/StrideLab"
+  },
+  {
     title: "AI Interview Platform",
     language: "JavaScript, HTML, CSS",
     description: "An AI‑powered behavioral interviewer built with React, Tailwind, and Node. The app guides users through a simulated job interview by asking questions, recording responses (both text and voice), and providing constructive feedback. It uses the OpenAI API (gpt‑4o‑mini) to generate context‑aware questions and actionable feedback, making it an ideal practice tool for polishing interview skills.",
@@ -16,13 +23,6 @@ const projects = [
     description: "A machine learning model that classifies political statements as either fake or real using the LIAR dataset. I built a full pipeline in Python using pandas and scikit-learn — preprocessing the data, vectorizing the text with TF-IDF, and training a logistic regression model that reached about 62% accuracy. I also started experimenting with TensorFlow to explore deep learning versions of the project.",
     image: "/images/AIFakeNewsDetector.jpg",
     link: "https://github.com/zkralec/AIFakeNewsDetector"
-  },
-  {
-    title: "Quote Scraper",
-    language: "Python",
-    description: "A beginner-friendly scraper that pulls quotes from quotes.toscrape.com and saves them to a CSV file. I used this project to get comfortable with scraping fundamentals and working with file output in Python.",
-    image: "/images/QuoteScraper.jpg",
-    link: "https://github.com/zkralec/QuoteScraper"
   },
   {
     title: "Review Aggregator",
