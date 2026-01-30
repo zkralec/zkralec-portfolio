@@ -109,27 +109,26 @@ function App() {
       <section className="about">
         <h2>About Me</h2>
           <p>
-            Hi! I'm Zachary, a senior studying Computer Science. I enjoy building projects with
-            Python, Swift, React, and more. I'm always trying to learn and improve my development skills.
+            Hi, I’m Zachary. I’m a senior studying Computer Science with a strong interest in 
+            software, automation, and systems. I enjoy building things that are practical and well 
+            thought out, whether that’s a full application or a small tool that quietly makes 
+            something easier or more reliable.
           </p>
           <p>
-            I take on all types of projects — whether it's a mobile app, a desktop tool, or even a
-            script to automate something. I enjoy the challenge and the chance to learn
-            something new. I try to approach each project with a clean and methodical mindset,
-            always aiming to solve the core problem first, while still keeping the user experience
-            in mind.
+            My background spans software development, internal tooling, and IT-focused automation. 
+            I’ve worked with full-stack web technologies, scripting, CI/CD pipelines, and system 
+            administration, and I’m comfortable moving between code and infrastructure depending 
+            on what the problem needs. I like understanding how systems work as a whole, not just 
+            writing code in isolation.
           </p>
           <p>
-            One of my favorite projects so far has been <i>Sprint Start</i>, an app I made to help
-            sprinters improve their reaction time. I use it myself during training for the track
-            team at St. Mary's College of Maryland, and I know it’s something other athletes on my
-            team find helpful too.
+            I tend to approach problems methodically. I focus on the core issue first, keep 
+            solutions simple where possible, and think about how real people will use and maintain 
+            what I build. I value clarity, reliability, and learning something new with every project.
           </p>
           <p>
-            I’m currently looking to grow as a software developer — I’m open to any role where I can
-            write code, build useful things, and continue learning. I also enjoy writing and sharing
-            what I’ve learned, whether that’s through documentation, code comments, or explaining
-            ideas to others.
+            I’m currently looking to grow as a software engineer in roles where I can build useful 
+            things, take on real responsibility, and continue developing my technical depth.
           </p>
       </section>
 
