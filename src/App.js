@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 const projects = [
   {
     title: "Stride Lab",
-    language: "JaveScript, HTML, CSS",
+    language: "JavaScript, HTML, CSS",
     type: "personal",
     description: "StrideLab is a web app I built that creates personalized training plans for track and field athletes. It uses Firebase for user accounts and OpenAI's GPT to generate detailed, structured workouts based on the athlete's info. Athletes can pick their events, training goals, which days they’re available, and whether they want weight training included. The GPT returns a clean JSON object with warmups, workouts, and cooldowns — all based on real track and field logic (not random sets or reps).",
     image: "/images/StrideLab.jpg",
@@ -217,6 +217,16 @@ function App() {
             </div>
           </a>
         ))}
+
+        <div className="project-archive-link">
+          <a
+            href="https://github.com/zkralec"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View full project archive on GitHub →
+          </a>
+        </div>
       </section>
 
       <section className="badges">
@@ -236,11 +246,11 @@ function App() {
         <h2>Contact</h2>
         <p>Email: <a href="mailto:zkralec@icloud.com">zkralec@icloud.com</a></p>
         <p>GitHub: <a href="https://github.com/zkralec" target="_blank" rel="noreferrer">github.com/zkralec</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/zack-kralec-8b5a7a263/" target="_blank" rel="noreferrer">linkedin.com/zack-kralec</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/zachary-kralec-8b5a7a263/" target="_blank" rel="noreferrer">linkedin.com/zachary-kralec</a></p>
       </section>
 
       <footer className="footer">
-        <p>© 2025 Zachary Kralec. All rights reserved.</p>
+        <p>© 2026 Zachary Kralec. All rights reserved.</p>
       </footer>
       <Analytics />
     </div>

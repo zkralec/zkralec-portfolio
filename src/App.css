@@ -386,3 +386,22 @@ h2 {
   transform: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
+.project-archive-link {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.project-archive-link a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #bdd9ff;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.project-archive-link a:hover {
+  opacity: 1;
+  color: #5ec9f5;
+  text-decoration: none;
+}
