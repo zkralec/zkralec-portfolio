@@ -355,3 +355,34 @@ h2 {
   margin-bottom: 0px;
   font-weight: 600;
 }
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #bdd9ff;
+  margin: 40px 0 14px;
+  font-weight: 700;
+}
+
+.section-note {
+  margin-top: -6px;
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+  color: #cfdaf9;
+  opacity: 0.85;
+}
+
+.work-note {
+  font-size: 0.85rem;
+  color: #c1d8ff;
+  opacity: 0.85;
+  margin-top: 10px;
+}
+
+.project-card.professional {
+  cursor: default;
+}
+
+.project-card.professional:hover {
+  transform: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
