@@ -34,22 +34,22 @@ const projects = [
     image: "/images/ReviewAggregator.jpg",
     link: "https://github.com/zkralec/ReviewAggregator"
   },
-  {
+  /*{
     title: "News Aggregator",
     language: "Python",
     type: "personal",
     description: "A multi-source scraper that collects and summarizes top headlines from NPR, TechCrunch, Hacker News, and BBC. Each article pulls a quick summary (or full text if needed) for fast reading. This project helped me explore how to extract meaningful content from real-world HTML structures.",
     image: "/images/NewsAggregator.jpg",
     link: "https://github.com/zkralec/NewsAggregator"
-  },
-  {
+  },*/
+  /*{
     title: "Personal Finance Tracker",
     language: "Python",
     type: "personal",
     description: "A Python desktop app for managing income and creating custom budgets. Users can input their salary, generate suggested budgets, and track purchases using dynamic tables. I built this to strengthen my skills in Tkinter and Matplotlib while learning how to structure a real-world Python project.",
     image: "/images/FinanceTracker.jpg",
     link: "https://github.com/zkralec/FinanceTracker"
-  },
+  },*/
   {
     title: "Sprint Start",
     language: "Swift",
@@ -167,9 +167,6 @@ function App() {
         <h2>Projects</h2>
 
         <h3 className="section-subtitle">Professional / Internal Projects (Synopsis)</h3>
-        <p className="section-note">
-          Summaries only — no source code, configurations, or internal data are shared.
-        </p>
 
         {professionalProjects.map((project, index) => (
           <div className="project-card professional" key={`pro-${index}`}>
