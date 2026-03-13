@@ -137,7 +137,7 @@ function App() {
         <div className="header-content">
           <div className="header-text">
             <h1 className="animated-name">Zachary Kralec</h1>
-            <p className="subheading">Computer Science Student @ St. Mary's College of Maryland</p>
+            <p className="subheading">Building software, AI, and automation tools | CS @</p>
             <p className="intro">
               Explore my projects below and get in touch to talk about my skills, interests, or what I could bring as an employee.
             </p>
