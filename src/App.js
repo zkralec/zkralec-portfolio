@@ -3,6 +3,14 @@ import { Analytics } from "@vercel/analytics/react";
 
 const projects = [
   {
+    title: "AI Automation Platform (Mission Control)",
+    language: "Python, React, TypeScript, FastAPI, Redis, OpenAI API",
+    type: "personal",
+    description: "Mission Control is an AI automation platform I built to run autonomous workflows that collect, analyze, and act on real-world data. It uses a Python FastAPI backend, Redis worker queues, and OpenAI models to orchestrate pipelines like web scraping, data normalization, LLM ranking, and automated notifications. The system can scan large datasets (such as job listings or tech deals), rank the results with AI, and generate structured reports highlighting the best opportunities. A React command-center dashboard provides observability into workflows, system health, task history, and AI usage.",
+    image: "/images/MissionControl.jpg",
+    link: "https://github.com/zkralec/MissionControl"
+  },
+  {
     title: "Stride Lab",
     language: "JavaScript, HTML, CSS",
     type: "personal",
@@ -58,14 +66,14 @@ const projects = [
     image: "/images/SprintStart.jpg",
     link: "https://github.com/zkralec/SprintStart"
   },
-  {
+  /*{
     title: "Track Tracker",
     language: "Swift",
     type: "personal",
     description: "A full-featured Swift app for track athletes. Users can log in via Firebase and track workouts, weights, injuries, and PRs for any event. The app also suggests meals, includes a simplified sprint start trainer, and saves data persistently across sessions. I built this as a passion project and pushed myself to tie everything together in a single app.",
     image: "/images/TrackTracker.jpg",
     link: "https://github.com/zkralec/TrackTracker"
-  },
+  },*/
   {
     title: "PDQ Software & Browser Extension Audit Automation",
     language: "Python, PowerShell, PDQ Deploy",
@@ -92,6 +100,18 @@ const professionalProjects = projects.filter((p) => p.type === "professional");
 const personalProjects = projects.filter((p) => p.type === "personal");
 
 const badges = [
+  {
+    title: "Hands-On AI",
+    image: "/images/hands-on-ai-cert.png"
+  },
+  {
+    title: "Python Data Structure and Algorithms",
+    image: "/images/data-structures-algorithms-cert.png"
+  },
+  {
+    title: "Python Essentials",
+    image: "/images/python-essentials-cert.png"
+  },
   {
     title: "Intro to Generative AI",
     image: "/images/genai-intro-badge.png"
@@ -163,36 +183,8 @@ function App() {
           </p>
       </section>
 
-      <section className="projects">
-        <h2>Projects</h2>
-
-        <h3 className="section-subtitle">Professional / Internal Projects (Synopsis)</h3>
-
-        {professionalProjects.map((project, index) => (
-          <div className="project-card professional" key={`pro-${index}`}>
-            <div className="project-image">
-              {project.image ? (
-                <img src={project.image} alt={project.title} />
-              ) : (
-                <div className="placeholder">Synopsis Only</div>
-              )}
-            </div>
-
-            <div className="project-info">
-              <span className="tech-badge">{project.language}</span>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-
-              <p className="work-note">
-                <strong>{project.organization}</strong>
-                <br />
-                {project.disclaimer}
-              </p>
-            </div>
-          </div>
-        ))}
-
-        <h3 className="section-subtitle">Personal Projects</h3>
+      <section className="personal-projects">
+        <h2>Personal Projects</h2>
 
         {personalProjects.map((project, index) => (
           <a
@@ -227,6 +219,35 @@ function App() {
             View full project archive on GitHub →
           </a>
         </div>
+
+      </section>
+
+      <section className="professional-projects">
+        <h2>Professional Projects</h2>
+
+        {professionalProjects.map((project, index) => (
+          <div className="project-card professional" key={`pro-${index}`}>
+            <div className="project-image">
+              {project.image ? (
+                <img src={project.image} alt={project.title} />
+              ) : (
+                <div className="placeholder">Synopsis Only</div>
+              )}
+            </div>
+
+            <div className="project-info">
+              <span className="tech-badge">{project.language}</span>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+
+              <p className="work-note">
+                <strong>{project.organization}</strong>
+                <br />
+                {project.disclaimer}
+              </p>
+            </div>
+          </div>
+        ))}
       </section>
 
       <section className="badges">
