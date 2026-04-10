@@ -68,13 +68,15 @@ export const architectureSteps = [
 
 export const selectedWork = [
   {
-    title: 'Stride Lab',
-    eyebrow: 'AI Product',
+    title: 'Sprint Start Pro',
+    eyebrow: 'Mobile App',
     description:
-      'I built this to generate more useful training plans than generic workout templates. It turns athlete inputs into structured plans that are easier to act on and adjust over time.',
-    tech: ['React', 'Firebase', 'OpenAI API'],
-    href: 'https://github.com/zkralec/stride-lab-training-platform',
-    image: '/images/StrideLab.jpg',
+      'This is my first released app. I built Sprint Start Pro to help track athletes train start timing with realistic cues, false start detection, and daily challenges that make discipline and consistency easier to measure.',
+    tech: ['iOS', 'Reaction training', 'Daily challenges'],
+    href: 'https://github.com/zkralec/sprint-start-pro',
+    gallery: ['/images/sprint-start-standard.png', '/images/sprint-start-reaction.png', '/images/sprint-start-daily.png'],
+    logo: '/images/sprint-start-logo.png',
+    highlight: 'Just released · 20+ early users',
   },
   {
     title: 'AI Interview Simulator',
@@ -104,13 +106,13 @@ export const selectedWork = [
     note: 'Professional work summary',
   },
   {
-    title: 'Review Aggregator',
-    eyebrow: 'Data Workflow',
+    title: 'Stride Lab',
+    eyebrow: 'AI Product',
     description:
-      'I built this to surface useful trust signals faster. It pulls review data into one pipeline so patterns are easier to scan than they are across scattered sources.',
-    tech: ['Python', 'Scraping', 'Data Parsing'],
-    href: 'https://github.com/zkralec/review-sentiment-scraper',
-    image: '/images/ReviewAggregator.jpg',
+      'I built this to generate more useful training plans than generic workout templates. It turns athlete inputs into structured plans that are easier to act on and adjust over time.',
+    tech: ['React', 'Firebase', 'OpenAI API'],
+    href: 'https://github.com/zkralec/stride-lab-training-platform',
+    image: '/images/StrideLab.jpg',
   },
   {
     title: 'Fake News Classifier',
