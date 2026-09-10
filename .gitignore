@@ -18,6 +18,9 @@
 .env.test.local
 .env.production.local
 
+# Local agent configuration and keys; never part of the public portfolio.
+/config/
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

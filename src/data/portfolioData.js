@@ -1,174 +1,369 @@
 export const navItems = [
-  { label: 'Mission Control', href: '#mission-control' },
-  { label: 'Selected Work', href: '#selected-work' },
-  { label: 'What I Build', href: '#what-i-build' },
-  { label: 'Stack', href: '#stack' },
+  { label: 'Introduction', href: '#top' },
+  { label: 'Case Study', href: '#cmmc-audit' },
+  { label: 'Systems', href: '#professional-systems' },
+  { label: 'Personal Work', href: '#selected-work' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Skills', href: '#skills' },
   { label: 'Contact', href: '#contact' },
 ];
 
+export const contactLinks = [
+  {
+    label: 'Email',
+    value: 'zkralec@icloud.com',
+    href: 'mailto:zkralec@icloud.com',
+  },
+  {
+    label: 'GitHub',
+    value: 'github.com/zkralec',
+    href: 'https://github.com/zkralec',
+  },
+  {
+    label: 'LinkedIn',
+    value: 'Zachary Kralec',
+    href: 'https://www.linkedin.com/in/zachary-kralec-8b5a7a263/',
+  },
+];
+
+// Set href to the existing public URL only after the current Master PDF is supplied.
+export const resume = {
+  href: null,
+  publicPath: '/Zachary-Kralec-Resume.pdf',
+  requestHref: 'mailto:zkralec@icloud.com?subject=Resume%20request',
+};
+
 export const heroContent = {
-  eyebrow: 'Zachary Kralec / Business Technology, AI, and Automation',
-  title: 'I build AI systems, automation tools, and internal software.',
+  eyebrow: 'Zachary Kralec / Enterprise IT & internal systems',
+  title: 'Systems & Automation Analyst',
+  specialization:
+    'Infrastructure, Microsoft 365, Security & Workflow Automation',
   description:
-    'Most of my work sits between backend systems, operations, and product design. I like building software that makes workflows easier to run, easier to review, and easier to trust.',
-  primaryCta: { label: 'View Mission Control', href: '#mission-control' },
-  secondaryCta: { label: 'GitHub', href: 'https://github.com/zkralec' },
-  intro:
-    'I’m especially interested in business technology roles where AI, automation, and real operating workflows come together in useful software.',
+    'I build automation and internal systems that make enterprise IT operations faster, more reliable, and easier to audit. My work spans endpoint management, Microsoft 365, infrastructure troubleshooting, security remediation, compliance workflows, and software development.',
+  primaryCta: { label: 'View Selected Work', href: '#cmmc-audit' },
 };
 
 export const heroNotes = [
-  { label: 'AI systems', value: 'Used for ranking, evaluation, and review workflows' },
-  { label: 'Automation', value: 'Built to reduce manual work without losing control' },
-  { label: 'Internal tools', value: 'Designed for the teams actually operating them' },
+  { label: 'Systems', value: 'Windows, endpoints & Microsoft 365' },
+  { label: 'Automation', value: 'Python, PowerShell & Power Platform' },
+  { label: 'Security', value: 'Remediation, evidence & audit readiness' },
 ];
 
 export const featuredProject = {
-  eyebrow: 'Featured Project',
-  title: 'Mission Control',
-  subtitle: 'An orchestration layer for AI-assisted workflows.',
-  href: 'https://github.com/zkralec/ai-automation-platform',
+  eyebrow: '01 / Featured case study',
+  title: 'CMMC Software, Services & Hardware Audit Program',
+  subtitle: 'From endpoint inventory to reviewable audit evidence.',
   description:
-    'I built Mission Control to replace scattered scripts and admin steps with one interface for intake, enrichment, ranking, and human review. The result was a workflow that was easier to operate, easier to audit, and much clearer for the people using it.',
-  screenshot: '/images/MissionControl.jpg',
-  stack: ['Python', 'FastAPI', 'React', 'TypeScript', 'Redis', 'OpenAI API'],
-  summary: [
-    'It gave operators one place to review workflow state instead of piecing things together from scripts and background jobs.',
-    'It made complex automation easier to control by keeping queue state, review checkpoints, and downstream actions visible.',
+    'An enterprise audit and compliance workflow built around PDQ Connect data, approved baselines, documented decisions, and persistent evidence. The project evolved from a local Python application into a Microsoft 365 pilot.',
+  metrics: [
+    { value: '100+', label: 'endpoints evaluated' },
+    { value: '< 30 min', label: 'to evaluate the endpoint set' },
+    {
+      value: '20+ hours',
+      label: 'of manual software & service review replaced',
+    },
   ],
-  capabilities: [
-    'Queue-backed orchestration for long-running tasks',
-    'Human review before final actions are triggered',
-    'Reporting and status views that make system state easier to understand',
+  problem:
+    'Software and service review meant working through exported inventory, checking approved items, and documenting decisions by hand. Recurring reviews needed a way to reuse those decisions and retain the evidence behind them.',
+  constraints:
+    'Work from PDQ Connect exports, cover device, software, service, and hardware information, and preserve traceability across imports. Keep unapproved and waiting-for-approval items visible, with a documented business need and approval record.',
+  design:
+    'I designed an import, classification, and review workflow that compares inventory with approved baselines. Prevalence analysis helps prioritize findings; reusable decisions and bulk review reduce repeated work. Import history and searchable evidence exports keep the review traceable.',
+  stack: [
+    'Python',
+    'Power Apps',
+    'Power Automate',
+    'Microsoft Lists',
+    'SharePoint Online',
+    'PDQ Connect',
   ],
+  implementations: [
+    {
+      label: 'Implementation 01',
+      title: 'Local Python application',
+      description:
+        'Import and transform PDQ Connect exports, review classifications against baselines, retain import snapshots and persistent audit records, and produce formatted, searchable evidence exports.',
+    },
+    {
+      label: 'Implementation 02',
+      title: 'Microsoft 365 pilot',
+      description:
+        'Extend the workflow through Power Apps, Power Automate, and Microsoft Lists. Connect individual findings to review history and support documented bulk decisions across related catalog items.',
+    },
+  ],
+  scope:
+    'The evaluation results describe the audit workflow. The Microsoft 365 implementation is a pilot; its interface and features do not imply an enterprise-wide rollout.',
+  demonstrates:
+    'Data transformation, baseline comparison, review workflow design, Microsoft 365 integration, and evidence retention—all tied to an actual IT compliance review process.',
 };
 
 export const architectureSteps = [
   {
     step: '01',
-    title: 'Capture',
-    detail: 'Pull in listings, feeds, documents, and other operational inputs.',
+    title: 'Import',
+    detail:
+      'Transform PDQ Connect exports into device, software, service, and hardware records.',
   },
   {
     step: '02',
-    title: 'Enrich',
-    detail: 'Normalize and rank raw inputs with model-assisted evaluation.',
+    title: 'Compare',
+    detail:
+      'Check approved baselines, flag unapproved items, and identify how widely findings occur.',
   },
   {
     step: '03',
     title: 'Review',
-    detail: 'Keep a human checkpoint in the loop before actions are taken.',
+    detail:
+      'Record business need, approver, decision date, and evidence; reuse decisions individually or in bulk.',
   },
   {
     step: '04',
-    title: 'Act',
-    detail: 'Turn workflow output into reports, notifications, and next steps.',
+    title: 'Retain',
+    detail:
+      'Keep import history and audit records, then export searchable evidence for recurring reviews.',
+  },
+];
+
+// Only enable an entry after its sanitized source has been supplied and visually identified.
+// Never substitute an unsanitized image or recreate the interface from the brief.
+export const cmmcScreenshots = [
+  {
+    id: 'control-overview',
+    title: 'Control review',
+    implementation: 'Local Python application',
+    src: '/images/cmmc-control-overview.png',
+    available: true,
+    width: 1711,
+    height: 919,
+    alt: 'CMMC Control review overview with workload summary cards, device attention priorities, a classification chart, and evidence export controls. Sensitive fields are redacted.',
+    caption:
+      'Overview dashboard surfacing review workload, device attention priorities, current classifications, and evidence exports.',
+  },
+  {
+    id: 'findings-detail',
+    title: 'Device, Software, & Service Findings',
+    implementation: 'Microsoft 365 pilot',
+    src: '/images/cmmc-findings-detail.png',
+    available: true,
+    width: 1708,
+    height: 920,
+    alt: 'Microsoft 365 Device, Software, & Service Findings screen with inventory filters, review status, decision source, and approval details. Sensitive fields are redacted.',
+    caption:
+      'Microsoft 365 findings view connecting individual device evidence to approval status, business need, and review history.',
+  },
+  {
+    id: 'bulk-review',
+    title: 'Catalog Bulk Review',
+    implementation: 'Microsoft 365 pilot',
+    src: '/images/cmmc-bulk-review.png',
+    available: true,
+    width: 1706,
+    height: 922,
+    alt: 'Microsoft 365 Catalog Bulk Review screen with catalog filters, prevalence sorting, multi-item selection, approval fields, and a review-changes step. Sensitive fields are redacted.',
+    caption:
+      'Bulk-review workflow for applying documented, reusable decisions to related catalog findings.',
+  },
+  {
+    id: 'audit-history',
+    title: 'Audit history',
+    implementation: 'Local Python application',
+    src: '/images/cmmc-audit-history.png',
+    available: true,
+    width: 1708,
+    height: 921,
+    alt: 'CMMC Audit history screen with retained import snapshots, report filenames, device and review counts, and a persistent decision log. Sensitive fields are redacted.',
+    caption:
+      'Persistent import snapshots and decision history preserve traceability across recurring audit cycles.',
+  },
+];
+
+export const professionalSystems = [
+  {
+    number: '01',
+    title: 'Knowledge Base Review Automation',
+    status: 'Production workflow',
+    description:
+      'A Microsoft 365 review cycle that gives documentation a clear owner, due date, and evidence of review. Built with Microsoft Lists, SharePoint Online, and Power Automate.',
+    details: [
+      {
+        title: 'Remind',
+        text: 'Send reminders 30, 14, and 7 days before review is due, then repeat overdue reminders until completion.',
+      },
+      {
+        title: 'Complete',
+        text: 'A “Mark Reviewed” action records the review and advances the next review date by one year.',
+      },
+      {
+        title: 'Document',
+        text: 'Track ownership, review state, reviewer, timestamp, status, and audit evidence in a persistent record.',
+      },
+    ],
+    outcome:
+      'Reduces reliance on manual follow-up and helps prevent stale documentation.',
+    tech: ['Microsoft Lists', 'SharePoint Online', 'Power Automate'],
+  },
+  {
+    number: '02',
+    title: 'Infrastructure & Endpoint Automation',
+    status: 'Operational IT work',
+    description:
+      'Administrative automation and troubleshooting focused on repeatable endpoint operations: establish the current state, apply a change, and validate the result.',
+    details: [
+      {
+        title: 'Inventory & audit',
+        text: 'Process PDQ Connect data, automate endpoint inventory and software audits, and extract device names and users for operational review.',
+      },
+      {
+        title: 'Remediate & validate',
+        text: 'Support OpenVPN upgrades and validation, BitLocker remediation, and Dell BIOS and driver updates with PowerShell and Python.',
+      },
+      {
+        title: 'Build & maintain',
+        text: 'Carry out device lifecycle operations, Windows 11 imaging, troubleshooting, and post-build validation.',
+      },
+    ],
+    outcome:
+      'Emphasizes repeatability, validation, and operational consistency across endpoint workflows.',
+    tech: ['PowerShell', 'Python', 'PDQ Connect', 'Windows 11'],
   },
 ];
 
 export const selectedWork = [
   {
+    id: 'sprint-start-pro',
     title: 'Sprint Start Pro',
-    eyebrow: 'Mobile App',
+    eyebrow: 'Released on the Apple App Store',
     description:
-      'This is my first released app. I built Sprint Start Pro to help track athletes train start timing with realistic cues, false start detection, and daily challenges that make discipline and consistency easier to measure.',
-    tech: ['iOS', 'Reaction training', 'Daily challenges'],
+      'A Swift iOS application for track athletes, built and released to support focused start practice. Realistic starting cues, reaction training, false-start detection, and structured practice features bring the starting line into individual training sessions.',
+    tech: ['Swift', 'iOS', 'Reaction training'],
     href: 'https://github.com/zkralec/sprint-start-pro',
-    gallery: ['/images/sprint-start-standard.png', '/images/sprint-start-reaction.png', '/images/sprint-start-daily.png'],
+    gallery: [
+      {
+        src: '/images/sprint-start-standard.png',
+        alt: 'Sprint Start Pro standard practice screen with track starting cues.',
+      },
+      {
+        src: '/images/sprint-start-reaction.png',
+        alt: 'Sprint Start Pro reaction training screen.',
+      },
+      {
+        src: '/images/sprint-start-daily.png',
+        alt: 'Sprint Start Pro daily practice challenge screen.',
+      },
+    ],
     logo: '/images/sprint-start-logo.png',
-    highlight: 'Just released · 20+ early users',
   },
   {
-    title: 'AI Interview Simulator',
-    eyebrow: 'LLM Interface',
+    id: 'mission-control',
+    title: 'Mission Control',
+    eyebrow: 'Archived personal engineering project',
     description:
-      'This project focused on making interview practice more structured. It combines generated prompts and guided feedback so the experience feels more useful than a simple chat session.',
-    tech: ['React', 'Tailwind', 'Node.js'],
-    href: 'https://github.com/zkralec/ai-interview-simulator',
-    image: '/images/AIInterviewPlatform.jpg',
-  },
-  {
-    title: 'Security Audit Automation',
-    eyebrow: 'Internal Tooling',
-    description:
-      'I built these workflows to reduce manual endpoint review and make audit state easier to track across managed systems, especially for software and browser extension coverage.',
-    tech: ['Python', 'PowerShell', 'PDQ Deploy'],
-    href: null,
-    note: 'Professional work summary',
-  },
-  {
-    title: 'OpenVPN Validation Tool',
-    eyebrow: 'Infrastructure',
-    description:
-      'This tool came out of rollout work where consistency mattered. It made version checks, updates, and post-install validation more reliable across endpoints.',
-    tech: ['Python', 'PowerShell', 'Deployment Ops'],
-    href: null,
-    note: 'Professional work summary',
-  },
-  {
-    title: 'Stride Lab',
-    eyebrow: 'AI Product',
-    description:
-      'I built this to generate more useful training plans than generic workout templates. It turns athlete inputs into structured plans that are easier to act on and adjust over time.',
-    tech: ['React', 'Firebase', 'OpenAI API'],
-    href: 'https://github.com/zkralec/stride-lab-training-platform',
-    image: '/images/StrideLab.jpg',
-  },
-  {
-    title: 'Fake News Classifier',
-    eyebrow: 'ML Project',
-    description:
-      'This project focused on building a clearer classification workflow for political claims, with experiments aimed at making model output easier to compare and evaluate.',
-    tech: ['Python', 'scikit-learn', 'Pandas'],
-    href: 'https://github.com/zkralec/fake-news-classifier',
-    image: '/images/AIFakeNewsDetector.jpg',
+      'A completed exploration of workflow orchestration and backend infrastructure. Built with FastAPI, PostgreSQL, Redis, and RQ background jobs, with REST APIs, persistent workflow state, and scheduled automation. Containerized with Docker and self-hosted on Ubuntu during development.',
+    note: 'An archived personal project, with no claim of an active commercial service.',
+    tech: ['FastAPI', 'PostgreSQL', 'Redis / RQ', 'Docker', 'Ubuntu'],
+    href: 'https://github.com/zkralec/ai-automation-platform',
   },
 ];
 
-export const capabilities = [
+export const experience = [
   {
-    number: '01',
-    title: 'AI systems',
-    description: 'I use AI inside practical systems for ranking, evaluation, review, and workflow support rather than as a standalone gimmick.',
+    company: 'Resource Management Concepts Inc.',
+    role: 'Corporate IT Support Analyst | Automation Systems',
+    start: '2025-09',
+    startLabel: 'September 2025',
+    end: null,
+    endLabel: 'Present',
+    location: 'Lexington Park, Maryland',
+    details: [
+      'Enterprise IT support across Windows, Microsoft 365, Active Directory, Entra ID, applications, servers, endpoints, and networks.',
+      'Develop Python, PowerShell, Power Apps, and Power Automate solutions for inventory, audit, remediation, update, and device lifecycle workflows.',
+      'Support Tenable Nessus remediation and validation, Exchange Online migration, and Windows 11 imaging and troubleshooting; gain pilot exposure to Entra ID and Intune.',
+    ],
   },
   {
-    number: '02',
-    title: 'Automation tools',
-    description: 'I keep coming back to work that reduces repetitive manual effort while preserving visibility, reliability, and control.',
+    company: 'Resource Management Concepts Inc.',
+    role: 'Information Technology Intern | Automation',
+    start: '2025-06',
+    startLabel: 'June 2025',
+    end: '2025-08',
+    endLabel: 'August 2025',
+    details: [
+      'Supported corporate IT and automation workflows during a summer internship.',
+    ],
   },
   {
-    number: '03',
-    title: 'Internal platforms',
-    description: 'A lot of the work I care most about is software for operators, analysts, and teams running real business processes.',
+    company: 'LTN Global Communications Inc.',
+    role: 'Software Engineering Intern | QA Automation',
+    start: '2024-05',
+    startLabel: 'May 2024',
+    end: '2024-08',
+    endLabel: 'August 2024',
+    details: [
+      'Built Python test automation that made video-test execution approximately 50% faster, with GitLab CI/CD integration.',
+      'Tested and troubleshot across more than 15 systems and documented more than 50 TestRail cases.',
+    ],
   },
   {
-    number: '04',
-    title: 'Business technology',
-    description: 'I’m interested in software that connects technical systems to business workflows in a way that people can actually use day to day.',
+    company: 'Sinclair Inc.',
+    role: 'Business Systems Analyst Intern',
+    start: '2023-06',
+    startLabel: 'June 2023',
+    end: '2023-08',
+    endLabel: 'August 2023',
+    details: [
+      'Participated in stakeholder meetings and requirements gathering, and built a working prototype for centralized employee training.',
+      'Proposed more than 20 ServiceNow enhancements.',
+    ],
   },
 ];
+
+export const certification = {
+  name: 'CompTIA Security+ CE',
+  earned: 'Earned August 2026',
+  date: '2026-08',
+};
 
 export const techStack = [
   {
-    category: 'Backend',
-    items: ['Python', 'FastAPI', 'Node.js', 'REST APIs', 'Redis'],
+    category: 'Systems & Infrastructure',
+    items: [
+      'Windows 10/11',
+      'Linux',
+      'Active Directory',
+      'Entra ID (pilot)',
+      'Microsoft 365',
+      'SharePoint Online',
+      'Proxmox',
+      'Docker',
+      'Networking',
+      'Endpoint imaging',
+    ],
   },
   {
-    category: 'Frontend',
-    items: ['React', 'Tailwind CSS', 'JavaScript', 'TypeScript', 'Framer Motion'],
+    category: 'Automation & Development',
+    items: [
+      'Python',
+      'PowerShell',
+      'Bash',
+      'SQL',
+      'REST APIs',
+      'Power Apps',
+      'Power Automate',
+      'Microsoft Lists',
+      'Git',
+      'GitLab CI/CD',
+    ],
   },
   {
-    category: 'AI / ML',
-    items: ['OpenAI API', 'Prompt orchestration', 'scikit-learn', 'Pandas', 'LLM evaluation'],
+    category: 'Security',
+    items: [
+      'Tenable Nessus',
+      'BitLocker',
+      'Duo MFA',
+      'Vulnerability remediation',
+      'CMMC support',
+      'Compliance evidence',
+      'Audit documentation',
+    ],
   },
-  {
-    category: 'Infrastructure',
-    items: ['PowerShell', 'PDQ Deploy', 'CI/CD', 'System administration', 'Automation pipelines'],
-  },
-];
-
-export const contactLinks = [
-  { label: 'Email', value: 'zkralec@icloud.com', href: 'mailto:zkralec@icloud.com' },
-  { label: 'GitHub', value: 'github.com/zkralec', href: 'https://github.com/zkralec' },
-  { label: 'LinkedIn', value: 'linkedin.com/in/zachary-kralec-8b5a7a263', href: 'https://www.linkedin.com/in/zachary-kralec-8b5a7a263/' },
 ];

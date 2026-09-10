@@ -1,15 +1,15 @@
 import './App.css';
-import { Analytics } from '@vercel/analytics/react';
 import Navigation from './components/Navigation';
 import HeroSection from './components/HeroSection';
 import FeaturedProject from './components/FeaturedProject';
 import ProjectGrid from './components/ProjectGrid';
 import CapabilitiesSection from './components/CapabilitiesSection';
+import ExperienceSection from './components/ExperienceSection';
 import TechStackSection from './components/TechStackSection';
 import ContactSection from './components/ContactSection';
 import {
   architectureSteps,
-  capabilities,
+  professionalSystems,
   contactLinks,
   featuredProject,
   heroContent,
@@ -17,26 +17,47 @@ import {
   navItems,
   selectedWork,
   techStack,
+  experience,
+  certification,
+  cmmcScreenshots,
+  resume,
 } from './data/portfolioData';
 
 function App() {
   return (
-    <div className="min-h-screen bg-page-glow text-ink">
-      <div className="app-shell">
-        <Navigation items={navItems} />
-        <main>
-          <HeroSection hero={heroContent} notes={heroNotes} />
-          <FeaturedProject project={featuredProject} nodes={architectureSteps} />
-          <ProjectGrid projects={selectedWork} />
-          <CapabilitiesSection areas={capabilities} />
-          <TechStackSection categories={techStack} />
-          <ContactSection links={contactLinks} />
-        </main>
-        <footer className="px-6 pb-8 text-center text-sm text-slate-500 lg:px-10">
-          © 2026 Zachary Kralec. Built with React, Tailwind, and Framer Motion.
-        </footer>
-      </div>
-      <Analytics />
+    <div className="app-shell">
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
+      <Navigation items={navItems} />
+      <main id="main-content" tabIndex={-1}>
+        <HeroSection
+          hero={heroContent}
+          notes={heroNotes}
+          links={contactLinks}
+          resume={resume}
+        />
+        <FeaturedProject
+          project={featuredProject}
+          nodes={architectureSteps}
+          screenshots={cmmcScreenshots.filter((item) => item.available)}
+        />
+        <CapabilitiesSection areas={professionalSystems} />
+        <ProjectGrid projects={selectedWork} />
+        <ExperienceSection roles={experience} />
+        <TechStackSection
+          categories={techStack}
+          certification={certification}
+        />
+        <ContactSection links={contactLinks} resume={resume} />
+      </main>
+      <footer className="container site-footer">
+        <p>© {new Date().getFullYear()} Zachary Kralec</p>
+        <p>Systems. Automation. Evidence.</p>
+        <a href="#top">
+          Back to top <span aria-hidden="true">↑</span>
+        </a>
+      </footer>
     </div>
   );
 }
