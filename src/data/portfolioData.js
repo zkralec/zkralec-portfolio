@@ -338,6 +338,15 @@ export const experience = [
   },
 ];
 
+export const education = {
+  school: "St. Mary's College of Maryland",
+  degree: 'B.S. in Computer Science',
+  minor: 'Minor in Business',
+  gpa: '3.6 / 4.0',
+  graduated: '2026-05',
+  graduatedLabel: 'May 2026',
+};
+
 export const certification = {
   name: 'CompTIA Security+ CE',
   earned: 'Earned August 2026',

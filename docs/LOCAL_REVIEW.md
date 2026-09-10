@@ -2,7 +2,7 @@
 
 ## Strategy and content
 
-The existing React application now leads with **Systems & Automation Analyst** and enterprise IT, infrastructure, Microsoft 365, security, and workflow automation. The page follows introduction → CMMC case study → professional systems → personal work → experience → skills/certification → contact.
+The existing React application now leads with **Systems & Automation Analyst** and enterprise IT, infrastructure, Microsoft 365, security, and workflow automation. The page follows introduction → CMMC case study → professional systems → personal work → experience → education → skills/certification → contact.
 
 The CMMC case study distinguishes the local Python application from the Microsoft 365 pilot. Its three result figures come from the supplied brief. Knowledge Base Review Automation is identified as a production workflow, and endpoint automation is presented as operational IT work. Sprint Start Pro follows those systems; Mission Control is explicitly archived. AI Interview Simulator, Fake News Classifier, and Stride Lab no longer occupy homepage space.
 
@@ -27,7 +27,7 @@ Images retain their aspect ratios and complete interface context. Captions and a
 | --- | --- |
 | Application and content | `src/App.js`, `src/data/portfolioData.js` |
 | Existing components | `src/components/ArchitectureDiagram.js`, `CapabilitiesSection.js`, `ContactSection.js`, `FeaturedProject.js`, `HeroSection.js`, `Navigation.js`, `ProjectGrid.js`, `Reveal.js`, `SectionHeading.js`, `TechStackSection.js` |
-| New components | `src/components/ExperienceSection.js`, `ResumeLink.js`, `ScreenshotGallery.js` |
+| New components | `src/components/ExperienceSection.js`, `EducationSection.js`, `ResumeLink.js`, `ScreenshotGallery.js` |
 | Styles | `src/App.css`, `src/index.css`, `tailwind.config.js` |
 | Tests and package configuration | `src/App.test.js`, `package.json`, `package-lock.json`, `.gitignore` |
 | Metadata | `public/index.html`, `public/manifest.json` |
@@ -49,7 +49,7 @@ git diff --check
 
 - ESLint: passed with no errors or warnings.
 - Jest: all 7 tests passed, covering section navigation, menu behavior and focus, contact links, resume availability, and gallery navigation, zoom, closure, and scroll restoration.
-- Production build: compiled successfully; main JavaScript approximately 106.94 kB gzip and CSS 6.47 kB gzip.
+- Production build: compiled successfully; main JavaScript approximately 107.17 kB gzip and CSS 6.60 kB gzip.
 - Diff whitespace check: passed.
 - Source-to-public-to-build byte comparisons: passed for all four sanitized screenshots and the Master PDF.
 
@@ -100,3 +100,14 @@ python3 -m http.server 4174 --bind 127.0.0.1 --directory build
 Open **http://127.0.0.1:4174**. The local production preview is already running; use the command above to restart it if needed. For live development, run `npm start`.
 
 No push, merge, publication, or deployment was performed. The implementation and verified preview are ready for local review. No implementation or resume-replacement items remain pending.
+
+
+## Final education and readability refinement
+
+Added a compact Education block between Experience and Skills, using the Master PDF: St. Mary's College of Maryland, B.S. in Computer Science, Minor in Business, GPA 3.6 / 4.0, graduated May 2026. The facts are centralized in `src/data/portfolioData.js` and rendered by `EducationSection.js`.
+
+Supporting descriptions, experience bullets, skill items, captions, and relevant metadata are 1px larger. A separate `--body-muted: #b4becc` token lightens supporting copy while preserving the existing heading colors and sizes.
+
+After these changes, lint, all 7 tests, and the production build passed. A targeted browser review at 1440, 1024, 768, and 390px confirmed Education's placement and facts, no clipping or horizontal overflow, and zero automated axe accessibility findings. Computed desktop styles confirmed the 1px body increase and unchanged existing heading sizes/colors. Desktop and mobile Education and case-study views were visually inspected.
+
+The additional check is saved at `/tmp/zkralec-portfolio-review/verify-polish.cjs`; its Education and supporting-copy screenshots use the `education-polish-*` and `copy-polish-*` filenames in that directory.

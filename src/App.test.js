@@ -40,6 +40,7 @@ test('leads with systems work and provides a destination for every navigation li
     'professional-systems',
     'selected-work',
     'experience',
+    'education',
     'skills',
     'contact',
   ]);

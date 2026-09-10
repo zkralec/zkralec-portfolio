@@ -40,9 +40,10 @@
   margin-bottom: 32px;
 }
 .section-description {
-  color: var(--muted);
+  color: var(--body-muted);
   max-width: 590px;
   margin-top: 24px;
+  font-size: 1.0625rem;
 }
 .button {
   display: inline-flex;
@@ -279,8 +280,8 @@
 }
 .case-intro-copy {
   align-self: end;
-  color: var(--muted);
-  font-size: 0.9rem;
+  color: var(--body-muted);
+  font-size: 0.9625rem;
 }
 .case-intro-copy .lead {
   color: var(--ink);
@@ -335,8 +336,8 @@
   color: var(--muted);
 }
 .scope-note {
-  color: var(--muted);
-  font-size: 0.75rem;
+  color: var(--body-muted);
+  font-size: 0.8125rem;
   max-width: 880px;
   margin-top: 23px;
 }
@@ -407,8 +408,8 @@
   line-height: 1.5;
 }
 .screenshot figcaption p {
-  color: var(--muted);
-  font-size: 0.75rem;
+  color: var(--body-muted);
+  font-size: 0.8125rem;
   line-height: 1.7;
 }
 .screenshot-lead figcaption {
@@ -434,8 +435,8 @@
   margin-top: 26px;
 }
 .technology-list {
-  color: var(--muted);
-  font-size: 0.75rem;
+  color: var(--body-muted);
+  font-size: 0.8125rem;
   line-height: 1.9;
   margin-top: 12px;
 }
@@ -447,8 +448,8 @@
   font-size: 1.13rem;
 }
 .case-prose p {
-  color: var(--muted);
-  font-size: 0.87rem;
+  color: var(--body-muted);
+  font-size: 0.9325rem;
   margin-top: 10px;
 }
 .workflow-section {
@@ -480,8 +481,8 @@
   margin-top: 12px;
 }
 .workflow p {
-  font-size: 0.8rem;
-  color: var(--muted);
+  font-size: 0.8625rem;
+  color: var(--body-muted);
   margin-top: 12px;
 }
 .evolution-section {
@@ -500,8 +501,8 @@
   font-size: 1.65rem;
 }
 .subsection-heading > p {
-  color: var(--muted);
-  font-size: 0.8rem;
+  color: var(--body-muted);
+  font-size: 0.8625rem;
 }
 .evolution-grid {
   display: grid;
@@ -518,8 +519,8 @@
   font-size: 1.15rem;
 }
 .evolution-grid > div > p:last-child {
-  color: var(--muted);
-  font-size: 0.83rem;
+  color: var(--body-muted);
+  font-size: 0.8925rem;
   margin-top: 12px;
 }
 .demonstrates {
@@ -532,7 +533,7 @@
 }
 .demonstrates > p:last-child {
   color: #c1cbd9;
-  font-size: 0.84rem;
+  font-size: 0.9025rem;
 }
 
 /* Native modal: focus containment and Escape are provided by dialog. */
@@ -636,8 +637,8 @@
   margin: 14px 0 18px;
 }
 .professional-summary > p:not([class]) {
-  color: var(--muted);
-  font-size: 0.88rem;
+  color: var(--body-muted);
+  font-size: 0.9425rem;
 }
 .professional-summary .technology-list {
   margin-top: 24px;
@@ -651,8 +652,8 @@
   font-weight: 700;
 }
 .professional-details dd {
-  color: var(--muted);
-  font-size: 0.82rem;
+  color: var(--body-muted);
+  font-size: 0.8825rem;
   margin-top: 5px;
 }
 .outcome {
@@ -702,8 +703,8 @@
   font-size: 2rem;
 }
 .personal-copy > p:not([class]) {
-  font-size: 0.87rem;
-  color: var(--muted);
+  font-size: 0.9325rem;
+  color: var(--body-muted);
 }
 .personal-copy .technology-list {
   margin-top: 22px;
@@ -732,8 +733,8 @@
   border-left: 1px solid var(--line);
 }
 .project-aside ul {
-  color: var(--muted);
-  font-size: 0.86rem;
+  color: var(--body-muted);
+  font-size: 0.9225rem;
   line-height: 2.2;
   margin-top: 12px;
 }
@@ -751,8 +752,8 @@
   padding-bottom: 0;
 }
 .role-date {
-  font-size: 0.72rem;
-  color: var(--muted);
+  font-size: 0.7825rem;
+  color: var(--body-muted);
   margin-bottom: 12px;
 }
 .experience-role h3 {
@@ -763,8 +764,8 @@
   margin-top: 7px;
 }
 .role-location {
-  color: var(--muted);
-  font-size: 0.74rem;
+  color: var(--body-muted);
+  font-size: 0.8025rem;
   margin-top: 5px;
 }
 .experience-role ul {
@@ -775,8 +776,8 @@
 .experience-role li {
   position: relative;
   padding-left: 15px;
-  color: var(--muted);
-  font-size: 0.83rem;
+  color: var(--body-muted);
+  font-size: 0.8925rem;
 }
 .experience-role li::before {
   content: '';
@@ -812,8 +813,8 @@
   font-weight: 600;
 }
 .certification time {
-  color: var(--muted);
-  font-size: 0.75rem;
+  color: var(--body-muted);
+  font-size: 0.8125rem;
 }
 .skills-list {
   display: grid;
@@ -833,8 +834,8 @@
   gap: 10px 0;
 }
 .skill-group li {
-  color: var(--muted);
-  font-size: 0.83rem;
+  color: var(--body-muted);
+  font-size: 0.8925rem;
 }
 .skill-group li:not(:last-child)::after {
   content: '/';
@@ -851,8 +852,8 @@
 }
 .contact-section .section-description,
 .contact-invitation {
-  font-size: 0.88rem;
-  color: var(--muted);
+  font-size: 0.9425rem;
+  color: var(--body-muted);
 }
 .contact-invitation {
   margin-top: 18px;
@@ -1172,7 +1173,7 @@
     font-size: 2.3rem;
   }
   .section-description {
-    font-size: 0.88rem;
+    font-size: 0.9425rem;
     margin-top: 20px;
   }
   .case-intro {
@@ -1182,7 +1183,7 @@
     font-size: 2.35rem;
   }
   .case-intro-copy {
-    font-size: 0.85rem;
+    font-size: 0.9125rem;
   }
   .case-intro-copy .lead {
     font-size: 1.18rem;
@@ -1212,7 +1213,7 @@
     font-size: 0.73rem;
   }
   .scope-note {
-    font-size: 0.7rem;
+    font-size: 0.7625rem;
     margin-top: 20px;
   }
   .case-gallery {
@@ -1227,7 +1228,7 @@
     gap: 28px;
   }
   .screenshot figcaption p {
-    font-size: 0.74rem;
+    font-size: 0.8025rem;
   }
   .case-detail-title {
     font-size: 1.9rem;
@@ -1239,7 +1240,7 @@
     font-size: 1.12rem;
   }
   .workflow p {
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
   }
   .evolution-section {
     padding: 22px;
@@ -1283,7 +1284,7 @@
     border-top: 1px solid var(--line);
   }
   .project-aside ul {
-    font-size: 0.82rem;
+    font-size: 0.8825rem;
   }
   .contact-links a {
     grid-template-columns: 64px 1fr 16px;
@@ -1342,4 +1343,42 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0 24px;
+}
+
+/* A compact education record between work experience and technical skills. */
+.education-section {
+  padding-block: 44px;
+}
+.education-section .section-split {
+  align-items: start;
+}
+.education-section h2 {
+  font-size: 1.7rem;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+.education-section h3 {
+  font-size: 1.35rem;
+}
+.education-date {
+  margin-top: 12px;
+  color: var(--body-muted);
+  font-size: 0.875rem;
+}
+.education-degree {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+.education-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 24px;
+  margin-top: 8px;
+  color: var(--body-muted);
+  font-size: 0.875rem;
+}
+@media (max-width: 799px) {
+  .education-section .section-split {
+    gap: 24px;
+  }
 }

@@ -5,6 +5,7 @@ import FeaturedProject from './components/FeaturedProject';
 import ProjectGrid from './components/ProjectGrid';
 import CapabilitiesSection from './components/CapabilitiesSection';
 import ExperienceSection from './components/ExperienceSection';
+import EducationSection from './components/EducationSection';
 import TechStackSection from './components/TechStackSection';
 import ContactSection from './components/ContactSection';
 import {
@@ -18,6 +19,7 @@ import {
   selectedWork,
   techStack,
   experience,
+  education,
   certification,
   cmmcScreenshots,
   resume,
@@ -45,6 +47,7 @@ function App() {
         <CapabilitiesSection areas={professionalSystems} />
         <ProjectGrid projects={selectedWork} />
         <ExperienceSection roles={experience} />
+        <EducationSection education={education} />
         <TechStackSection
           categories={techStack}
           certification={certification}

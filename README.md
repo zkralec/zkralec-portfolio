@@ -26,7 +26,7 @@ The app assumes hosting at the domain root (`/`). `npm run build` writes static 
 
 ## Content and assets
 
-- `src/data/portfolioData.js`: positioning, navigation, project details, screenshot order and captions, experience, certification, skills, contacts, and resume configuration.
+- `src/data/portfolioData.js`: positioning, navigation, project details, screenshot order and captions, experience, education, certification, skills, contacts, and resume configuration.
 - `src/components/`: section presentation, responsive navigation, resume actions, and the accessible screenshot dialog.
 - `src/index.css`, `src/App.css`, `tailwind.config.js`: typography, shared theme, layouts, responsive rules, focus states, and reduced-motion behavior.
 - `public/index.html`, `public/manifest.json`: title, descriptions, canonical URL, Open Graph / Twitter previews, and app metadata.
