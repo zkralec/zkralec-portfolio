@@ -1337,3 +1337,9 @@
     font-size: 0.73rem;
   }
 }
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 24px;
+}

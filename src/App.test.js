@@ -46,9 +46,11 @@ test('leads with systems work and provides a destination for every navigation li
   within(screen.getByRole('navigation', { name: 'Primary' }))
     .getAllByRole('link')
     .forEach((link) => {
-      expect(sections.find((section) => `#${section.id}` === link.getAttribute('href'))).toHaveAttribute(
-        'aria-labelledby',
-      );
+      expect(
+        sections.find(
+          (section) => `#${section.id}` === link.getAttribute('href'),
+        ),
+      ).toHaveAttribute('aria-labelledby');
     });
 });
 
@@ -68,7 +70,9 @@ test('mobile navigation opens, supports Escape, and transfers focus to the selec
     ),
   );
   expect(toggle).toHaveAttribute('aria-expanded', 'false');
-  expect(screen.getByRole('region', { name: 'A foundation in real operations.' })).toHaveFocus();
+  expect(
+    screen.getByRole('region', { name: 'A foundation in real operations.' }),
+  ).toHaveFocus();
 });
 
 test('provides contact destinations and protects links that open another tab', () => {
@@ -76,10 +80,13 @@ test('provides contact destinations and protects links that open another tab', (
   expect(
     screen.getByRole('link', { name: /email zkralec@icloud.com/i }),
   ).toHaveAttribute('href', 'mailto:zkralec@icloud.com');
-  screen.getAllByRole('link').filter((link) => link.target === '_blank').forEach((link) => {
-    expect(link).toHaveAttribute('rel', 'noreferrer');
-    expect(link.getAttribute('href')).toMatch(/^https:\/\//);
-  });
+  screen
+    .getAllByRole('link')
+    .filter((link) => link.target === '_blank')
+    .forEach((link) => {
+      expect(link).toHaveAttribute('rel', 'noreferrer');
+      expect(link.getAttribute('href')).toMatch(/^https:\/\//);
+    });
 });
 
 test('offers a resume request without linking to an outdated PDF when the Master PDF is unavailable', () => {

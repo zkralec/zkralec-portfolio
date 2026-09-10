@@ -42,18 +42,31 @@ function ProjectGrid({ projects }) {
                   </div>
                   <p>{project.description}</p>
                   <p className="technology-list">{project.tech.join(' / ')}</p>
-                  <a
-                    className="text-link"
-                    href={project.href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    View repository <span aria-hidden="true">↗</span>
-                    <span className="sr-only">
-                      {' '}
-                      for {project.title} (opens in a new tab)
-                    </span>
-                  </a>
+                  <div className="project-links">
+                    {project.links.map((link) => (
+                      <a
+                        key={link.href}
+                        className="text-link"
+                        href={link.href}
+                        target={
+                          link.href.startsWith('https:') ? '_blank' : undefined
+                        }
+                        rel={
+                          link.href.startsWith('https:')
+                            ? 'noreferrer'
+                            : undefined
+                        }
+                      >
+                        {link.label} <span aria-hidden="true">↗</span>
+                        <span className="sr-only">
+                          {' '}
+                          for {project.title}
+                          {link.href.startsWith('https:') &&
+                            ' (opens in a new tab)'}
+                        </span>
+                      </a>
+                    ))}
+                  </div>
                 </div>
                 {project.gallery ? (
                   <div
@@ -76,10 +89,9 @@ function ProjectGrid({ projects }) {
                   <div className="project-aside">
                     <p className="small-label">Engineering focus</p>
                     <ul>
-                      <li>Persistent workflow state</li>
-                      <li>Queue-backed background jobs</li>
-                      <li>Scheduled automation</li>
-                      <li>Ubuntu self-hosting</li>
+                      {project.highlights.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
                     </ul>
                   </div>
                 )}

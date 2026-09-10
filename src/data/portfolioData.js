@@ -26,9 +26,9 @@ export const contactLinks = [
   },
 ];
 
-// Set href to the existing public URL only after the current Master PDF is supplied.
+// The supplied Master PDF is served at the original public resume URL.
 export const resume = {
-  href: null,
+  href: '/Zachary-Kralec-Resume.pdf',
   publicPath: '/Zachary-Kralec-Resume.pdf',
   requestHref: 'mailto:zkralec@icloud.com?subject=Resume%20request',
 };
@@ -71,6 +71,7 @@ export const featuredProject = {
     'I designed an import, classification, and review workflow that compares inventory with approved baselines. Prevalence analysis helps prioritize findings; reusable decisions and bulk review reduce repeated work. Import history and searchable evidence exports keep the review traceable.',
   stack: [
     'Python',
+    'PowerShell',
     'Power Apps',
     'Power Automate',
     'Microsoft Lists',
@@ -236,7 +237,16 @@ export const selectedWork = [
     description:
       'A Swift iOS application for track athletes, built and released to support focused start practice. Realistic starting cues, reaction training, false-start detection, and structured practice features bring the starting line into individual training sessions.',
     tech: ['Swift', 'iOS', 'Reaction training'],
-    href: 'https://github.com/zkralec/sprint-start-pro',
+    links: [
+      {
+        label: 'View on the App Store',
+        href: 'https://apps.apple.com/us/app/sprint-start-pro/id6760863199',
+      },
+      {
+        label: 'View repository',
+        href: 'https://github.com/zkralec/sprint-start-pro',
+      },
+    ],
     gallery: [
       {
         src: '/images/sprint-start-standard.png',
@@ -259,9 +269,19 @@ export const selectedWork = [
     eyebrow: 'Archived personal engineering project',
     description:
       'A completed exploration of workflow orchestration and backend infrastructure. Built with FastAPI, PostgreSQL, Redis, and RQ background jobs, with REST APIs, persistent workflow state, and scheduled automation. Containerized with Docker and self-hosted on Ubuntu during development.',
-    note: 'An archived personal project, with no claim of an active commercial service.',
     tech: ['FastAPI', 'PostgreSQL', 'Redis / RQ', 'Docker', 'Ubuntu'],
-    href: 'https://github.com/zkralec/ai-automation-platform',
+    links: [
+      {
+        label: 'Discuss this project',
+        href: 'mailto:zkralec@icloud.com?subject=Mission%20Control%20project',
+      },
+    ],
+    highlights: [
+      'Persistent workflow state',
+      'Queue-backed background jobs',
+      'Scheduled automation',
+      'Ubuntu self-hosting',
+    ],
   },
 ];
 
@@ -288,7 +308,8 @@ export const experience = [
     end: '2025-08',
     endLabel: 'August 2025',
     details: [
-      'Supported corporate IT and automation workflows during a summer internship.',
+      'Automated endpoint inventory, software auditing, device-name and user extraction, and recurring administrative tasks with PowerShell.',
+      'Supported Windows deployment, server hardware, and a three-node Proxmox/Linux virtualization environment.',
     ],
   },
   {
@@ -299,7 +320,7 @@ export const experience = [
     end: '2024-08',
     endLabel: 'August 2024',
     details: [
-      'Built Python test automation that made video-test execution approximately 50% faster, with GitLab CI/CD integration.',
+      'Built Python test automation that reduced video-test execution time by approximately 50%, and maintained GitLab CI/CD pipelines.',
       'Tested and troubleshot across more than 15 systems and documented more than 50 TestRail cases.',
     ],
   },
