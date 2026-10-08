@@ -26,7 +26,7 @@ export const contactLinks = [
   },
 ];
 
-// The supplied Master PDF is served at the original public resume URL.
+// The October 7, 2026 M365 resume is served at the original public resume URL.
 export const resume = {
   href: '/Zachary-Kralec-Resume.pdf',
   publicPath: '/Zachary-Kralec-Resume.pdf',
@@ -288,7 +288,7 @@ export const selectedWork = [
 export const experience = [
   {
     company: 'Resource Management Concepts Inc.',
-    role: 'Corporate IT Support Analyst | Automation Systems',
+    role: 'Corporate IT Support/Help Desk Analyst',
     start: '2025-09',
     startLabel: 'September 2025',
     end: null,
@@ -296,13 +296,15 @@ export const experience = [
     location: 'Lexington Park, Maryland',
     details: [
       'Enterprise IT support across Windows, Microsoft 365, Active Directory, Entra ID, applications, servers, endpoints, and networks.',
+      'Develop a modern SharePoint Online intranet to replace a classic/on-prem site, building reusable SharePoint Framework (SPFx) web parts with React, TypeScript, and SCSS for employee resources, company information, and staff directories.',
+      'Integrated published SharePoint News through SharePoint REST APIs using SPHttpClient, displaying current announcements and banner images in custom homepage components; tested and refined functionality in SharePoint.',
       'Develop Python, PowerShell, Power Apps, and Power Automate solutions for inventory, audit, remediation, update, and device lifecycle workflows.',
       'Support Tenable Nessus remediation and validation, Exchange Online migration, and Windows 11 imaging and troubleshooting; gain pilot exposure to Entra ID and Intune.',
     ],
   },
   {
     company: 'Resource Management Concepts Inc.',
-    role: 'Information Technology Intern | Automation',
+    role: 'IT Intern',
     start: '2025-06',
     startLabel: 'June 2025',
     end: '2025-08',
@@ -372,6 +374,13 @@ export const techStack = [
   {
     category: 'Automation & Development',
     items: [
+      'SharePoint Framework (SPFx)',
+      'React',
+      'TypeScript',
+      'JavaScript',
+      'SCSS',
+      'SharePoint REST APIs',
+      'SPHttpClient',
       'Python',
       'PowerShell',
       'Bash',

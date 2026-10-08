@@ -30,7 +30,7 @@ The app assumes hosting at the domain root (`/`). `npm run build` writes static 
 - `src/components/`: section presentation, responsive navigation, resume actions, and the accessible screenshot dialog.
 - `src/index.css`, `src/App.css`, `tailwind.config.js`: typography, shared theme, layouts, responsive rules, focus states, and reduced-motion behavior.
 - `public/index.html`, `public/manifest.json`: title, descriptions, canonical URL, Open Graph / Twitter previews, and app metadata.
-- `public/Zachary-Kralec-Resume.pdf`: the supplied `Zachary_Kralec_Resume_Master.pdf`, copied without modification. Its original public URL is preserved.
+- `public/Zachary-Kralec-Resume.pdf`: the October 7, 2026 `Zachary_Kralec_Resume_M365_Systems(2).pdf`, copied without modification. Its original public URL is preserved.
 - `public/images/social-preview.png`: 1200 × 630 social image. Editable HTML source is in `scripts/social-preview.html`.
 
 The CMMC gallery uses the supplied sanitized files unchanged. Identify any future replacement by its visible screen title, preserve all redactions, and update the intrinsic width and height in the data file if the dimensions change.
