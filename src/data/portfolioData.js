@@ -304,7 +304,7 @@ export const experience = [
   },
   {
     company: 'Resource Management Concepts Inc.',
-    role: 'IT Intern',
+    role: 'Information Technology Intern | Automation',
     start: '2025-06',
     startLabel: 'June 2025',
     end: '2025-08',
