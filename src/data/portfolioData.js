@@ -26,7 +26,7 @@ export const contactLinks = [
   },
 ];
 
-// The October 7, 2026 M365 resume is served at the original public resume URL.
+// The M365 resume with the preferred RMC titles is served at the original public resume URL.
 export const resume = {
   href: '/Zachary-Kralec-Resume.pdf',
   publicPath: '/Zachary-Kralec-Resume.pdf',
