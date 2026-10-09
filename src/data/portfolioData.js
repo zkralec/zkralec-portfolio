@@ -288,7 +288,7 @@ export const selectedWork = [
 export const experience = [
   {
     company: 'Resource Management Concepts Inc.',
-    role: 'Corporate IT Support/Help Desk Analyst',
+    role: 'Corporate IT Analyst | Automation Systems',
     start: '2025-09',
     startLabel: 'September 2025',
     end: null,
